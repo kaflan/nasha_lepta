@@ -247,9 +247,7 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/images',
           '<%= yeoman.dist %>/styles',
           '<%= yeoman.dist %>/scripts'
-        ]
-<<<<<<< HEAD
-        ,
+        ],
         blockReplacements: {
           css: function (block) {
             return '<link rel="stylesheet" href="' + block.dest + '"/>';
@@ -258,8 +256,6 @@ module.exports = function (grunt) {
             return '<script src="' + block.dest + '"></script>';
           }
         }
-=======
->>>>>>> 08b05fdcaf9dc2bfd0e821f16144e98a6e498e18
       }
     },
 
@@ -411,11 +407,7 @@ module.exports = function (grunt) {
       },
       pages: {
         options: {
-<<<<<<< HEAD
           remote: 'git@github.com:kaflan/nasha_lepta.git',
-=======
-          remote: 'https://SergiiShapoval:58c1d6724256e91be860096fc3a9f03ba904bf49@github.com/SergiiShapoval/nasha_lepta.git',
->>>>>>> 08b05fdcaf9dc2bfd0e821f16144e98a6e498e18
           branch: 'gh-pages'
         }
       }
@@ -485,7 +477,7 @@ module.exports = function (grunt) {
    'usemin',
    'htmlmin',
    'buildcontrol'
- ])
+ ]);
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
