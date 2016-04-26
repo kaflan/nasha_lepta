@@ -16,13 +16,8 @@
     "grunt-contrib-copy": "^0.7.0",
     "grunt-contrib-cssmin": "^0.12.3",
     "grunt-contrib-htmlmin": "^0.4.0",
-<<<<<<< HEAD
-    "grunt-contrib-imagemin": "^0.9.4",
-    "grunt-contrib-jshint": "^0.11.3",
-=======
     "grunt-contrib-imagemin": "1.0.0",
     "grunt-contrib-jshint": "^0.11.0",
->>>>>>> 08b05fdcaf9dc2bfd0e821f16144e98a6e498e18
     "grunt-contrib-uglify": "^0.7.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-filerev": "^2.3.1",
@@ -33,7 +28,6 @@
     "grunt-svgmin": "^2.0.1",
     "grunt-usemin": "^3.1.1",
     "grunt-wiredep": "^2.0.0",
-<<<<<<< HEAD
     "imagemin": "^4.0.0",
     "jasmine-core": "^2.4.1",
     "jshint-stylish": "^1.0.2",
@@ -42,8 +36,7 @@
     "karma-phantomjs-launcher": "^0.2.3",
     "load-grunt-tasks": "^3.4.1",
     "phantomjs": "^2.1.3",
-    "time-grunt": "^1.3.0"
-=======
+    "time-grunt": "^1.3.0",
     "jasmine-core": "^2.4.1",
     "jshint-stylish": "^1.0.0",
     "karma": "^0.13.20",
@@ -54,7 +47,6 @@
     "phantomjs-prebuilt": "^2.1.6",
     "time-grunt": "1.0.0",
     "vinyl-fs": "2.2.1"
->>>>>>> 08b05fdcaf9dc2bfd0e821f16144e98a6e498e18
   },
   "engines": {
     "node": ">=0.10.0"
