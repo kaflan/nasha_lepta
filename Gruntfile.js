@@ -150,7 +150,7 @@ module.exports = function (grunt) {
       },
       server: '.tmp',
       css: {
-         src: [ 'styles/' ]
+        src: [ 'styles/' ]
       }
     },
 
@@ -193,14 +193,14 @@ module.exports = function (grunt) {
         fileTypes:{
           js: {
             block: /(([\s\t]*)\/{2}\s*?bower:\s*?(\S*))(\n|\r|.)*?(\/{2}\s*endbower)/gi,
-              detect: {
-                js: /'(.*\.js)'/gi
-              },
-              replace: {
-                js: '\'{{filePath}}\','
-              }
+            detect: {
+              js: /'(.*\.js)'/gi
+            },
+            replace: {
+              js: '\'{{filePath}}\','
             }
           }
+        }
       }
     },
 
@@ -247,22 +247,14 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/images',
           '<%= yeoman.dist %>/styles',
           '<%= yeoman.dist %>/scripts'
-        ],
-        blockReplacements: {
-          css: function (block) {
-            return '<link rel="stylesheet" href="' + block.dest + '"/>';
-          },
-          js: function (block) {
-            return '<script src="' + block.dest + '"></script>';
-          }
-        }
+        ]
       }
     },
 
     cssmin: {
       combine: {
         files: {
-          '<%= yeoman.dist %>/styles/combined.css': ['.tmp/concat/styles/*.css']
+          '<%= yeoman.dist %>/styles/combined.css': ['.tmp/concat/styles/vendor.css', '.tmp/concat/styles/main.css']
         }
       }
     },
@@ -397,7 +389,7 @@ module.exports = function (grunt) {
         singleRun: true
       }
     },
-/*https://github.com/robwierzbowski/grunt-build-control*/
+    /*https://github.com/robwierzbowski/grunt-build-control*/
     buildcontrol: {
       options: {
         dir: 'dist',
@@ -461,23 +453,7 @@ module.exports = function (grunt) {
     'htmlmin',
     'cssmin:combine'
   ]);
- grunt.registerTask('bildProject',[
-   'clean:dist',
-   'wiredep',
-   'useminPrepare',
-   'concurrent:dist',
-   'autoprefixer',
-   'concat',
-   'ngAnnotate',
-   'copy:dist',
-   'cdnify',
-   'cssmin',
-   'uglify',
-   'filerev',
-   'usemin',
-   'htmlmin',
-   'buildcontrol'
- ]);
+
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
